@@ -1,0 +1,11 @@
+name: calclix
+description: A command-line application for calculating the lix readability measure for a text file.
+
+environment:
+  sdk: '>=2.9.0-edge <3.0.0'
+
+dependencies:
+  collection:
+    git:
+      url: https://github.com/dart-lang/collection/
+      ref: null_safety
