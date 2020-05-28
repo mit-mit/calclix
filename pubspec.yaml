@@ -2,7 +2,7 @@ name: calclix
 description: A command-line application for calculating the lix readability measure for a text file.
 
 environment:
-  sdk: '>=2.9.0-edge <3.0.0'
+  sdk: '>=2.9.0-11.0.dev <3.0.0'
 
 dependencies:
   collection:
