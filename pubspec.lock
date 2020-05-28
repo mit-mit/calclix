@@ -7,7 +7,7 @@ packages:
       path: "."
       ref: null_safety
       resolved-ref: "6ef56d3e8cfa4d347cbf70321251c5bb87acc9a1"
-      url: "https://github.com/dart-lang/collection/"
+      url: "https://github.com/dart-lang/collection"
     source: git
     version: "1.14.13-dev"
 sdks:
