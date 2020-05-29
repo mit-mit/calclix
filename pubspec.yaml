@@ -1,22 +1,17 @@
 name: calclix
-description: A command-line application for calculating the lix readability measure for a text file.
+description: A command-line application demonstrating use of null safety.
+version: 1.0.0
 
 environment:
   sdk: '>=2.9.0-11.0.dev <3.0.0'
 
 dependencies:
   collection: 1.14.13-dev
-  meta: 1.2.0-dev
 
-// Temporary overrides as the null safety enabled versions of these packages are
-// not yet published to pub.dev.
+# Temporary override as the null safety enabled versions of this package is
+# not yet published to pub.dev.
 dependency_overrides:
   collection:
     git:
       url: https://github.com/dart-lang/collection
       ref: null_safety
-  meta:
-    git:
-      url: https://github.com/dart-lang/sdk
-      path: pkg/meta
-      ref: null_safety-pkgs
