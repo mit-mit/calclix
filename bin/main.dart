@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'dart:io';
-import 'package:lix/lix.dart';
+import 'package:lix/lix.dart' as lix;
 
 void main(List<String> arguments) {
   // Parse the arguments; we expect a single argument containing the file name.
@@ -16,17 +16,17 @@ void main(List<String> arguments) {
     // TIP: We're using null safe versions of the core libraries, and we already
     // checked that there is a single argument, so we can safely assume the
     // first argument isn't null.
-    final String fileName = arguments[0];
+    final fileName = arguments[0];
     print("Calculating Lix of '$fileName'");
 
     // Calculate lix.
-    final LixCounts lc = calcLix(File(fileName).readAsStringSync());
-    if (lc.lix == -1) {
-      print('Invalid input, could not calculate lix!');
-    } else {
-      print("Lix is: ${lc.lix()}, ${lc.description()} to read ("
+    try {
+      final lc = lix.calculate(File(fileName).readAsStringSync());
+      print("Lix is: ${lc.readability}, ${lc.describe} to read ("
           "words: ${lc.words}, long words: ${lc.longWords}, "
           "periods: ${lc.periods}).");
+    } catch (Exception) {
+      print('Invalid input, could not calculate lix!');
     }
   }
 }
